@@ -18,7 +18,15 @@ const { activeNav } = Astro.props;
         {
           LOGO_IMAGE.enable ? (
             <img
-              src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+              id={"logo_white"}
+              src={"/assets/logo_white.png"}
+              alt={SITE.title}
+              width={LOGO_IMAGE.width}
+              height={LOGO_IMAGE.height}
+            />
+            <img
+              id = {"logo_black"}
+              src={"/assets/logo.png"}
               alt={SITE.title}
               width={LOGO_IMAGE.width}
               height={LOGO_IMAGE.height}
@@ -66,8 +74,8 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              About
+            <a href="http://marianoscotti.com" class={activeNav === "about" ? "active" : ""} target=”_blank”>
+              About Me
             </a>
           </li>
           <li>

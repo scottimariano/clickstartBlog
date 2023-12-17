@@ -23,8 +23,15 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1 class="mr-2">Clickstart</h1>
-      
+      <p>
+        Hi!, I'm Mariano and this is my little personal blog. <br>
+        This is an opportunity to share what I have learned (and am still learning) 
+        on my backend developer journey. Here you'll find posts related to best development practices, emerging technologies,
+        and some random cool stuff that we can all love.
+      </p>
+      <p>
+        I hope you'll enjoy this as much as I did creating it. <br>
+      </p>
       <a
         target="_blank"
         href="/rss.xml"
@@ -40,16 +47,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path><circle cx="6" cy="18" r="2"></circle>
         </svg>
       </a>
-
-      <p>
-        Hi!, I'm Mariano and this is my little personal blog. <br>
-        This is an opportunity to share what I have learned (and am still learning) 
-        on my backend developer journey. Where you'll find posts related to best development practices, emerging technologies,
-        and some random cool stuff that we can all love.
-      </p>
-      <p>
-        I hope you'll enjoy this as much as I did creating it.
-      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
