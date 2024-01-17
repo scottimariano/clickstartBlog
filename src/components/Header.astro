@@ -1,5 +1,8 @@
 ---
 import { LOGO_IMAGE, SITE } from "@config";
+import { Image } from 'astro:assets';
+import logoBlack from "../assets/images/logo.png"
+import logoWhite from "../assets/images/logo_white.png"
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
@@ -14,22 +17,18 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo whitespace-nowrap">
+      <a href="/" class="whitespace-nowrap">
         {
           LOGO_IMAGE.enable ? (
-            <img
-              id={"logo_white"}
-              src={"/assets/logo_white.png"}
+            <Image 
+              id={"logo_white"} 
+              src={logoWhite}
               alt={SITE.title}
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
             />
-            <img
-              id = {"logo_black"}
-              src={"/assets/logo.png"}
+            <Image 
+              id = {"logo_black"} 
+              src={logoBlack}
               alt={SITE.title}
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
             />
           ) : (
             SITE.title
