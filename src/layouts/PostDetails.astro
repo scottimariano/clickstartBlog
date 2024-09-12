@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
+import Comments from "@components/Comments";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 
@@ -13,7 +14,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
+const { title, author, description, ogImage, canonicalURL, pubDatetime, tags, commentsAvailable } =
   post.data;
 
 const { Content } = await post.render();
@@ -55,6 +56,8 @@ const ogUrl = new URL(
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
+    
+    {commentsAvailable && <Comments client:only />}
   </main>
   <Footer />
 </Layout>

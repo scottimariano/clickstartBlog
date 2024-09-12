@@ -10,6 +10,7 @@ tags:
   - Basic
   - Object Oriented Program
 description: A brief intro to the Software Development Design Patterns.
+commentsAvailable: true
 ---
 
 Their goal is to provide a catalog of reusable elements in the design of software systems and avoid repetition in the search for solutions to problems that are already known and solved.

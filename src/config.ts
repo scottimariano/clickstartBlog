@@ -1,7 +1,8 @@
 import type { Site, SocialObjects } from "./types";
+import type { GiscusProps } from "@giscus/react";
 
 export const SITE: Site = {
-  website: "https://clickstart.marianoscotti.com/", // replace this with your deployed domain
+  website: "https://clickstart.marianoscotti.com.ar/", // replace this with your deployed domain
   author: "Mariano Scotti",
   desc: "A blog to share my developer journey",
   title: "Clickstart",
@@ -141,3 +142,16 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
 ];
+
+export const GISCUS: GiscusProps = {
+  repo: "scottimariano/clickstartBlog",
+  repoId: "R_kgDOK2QBGQ",
+  category: "Blog Post Comments",
+  categoryId: "DIC_kwDOK2QBGc4CiT4c",
+  mapping: "pathname",
+  reactionsEnabled: "0",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
+};

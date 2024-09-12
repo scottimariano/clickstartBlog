@@ -10,6 +10,7 @@ tags:
   - Basic
   - Back-end
 description: Many times we hear the term API, but do we really know what it means?.
+commentsAvailable: true
 ---
 
 Many times we hear the term API, but do we really know what it means?
